@@ -1,0 +1,17 @@
+development: &development
+  adapter: postgresql
+  database: matchmakersmatch_development
+  username: moiseszaragoza
+  host:     localhost
+  port:     5432
+  schema_search_path: public
+  min_messages: warning
+
+test:
+  <<: *development
+  database: matchmakersmatch_test
+
+cucumber:
+  database: matchmakersmatch_cucumber
+
+
